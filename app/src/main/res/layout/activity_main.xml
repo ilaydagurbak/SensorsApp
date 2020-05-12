@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/buttonLayout"
     style="@style/Widget.AppCompat.Button.Borderless.Colored"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
 
-<Button
-    android:id="@+id/button1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/button_customized"
-    android:text="@string/sensors"
-    android:drawableTop="@drawable/ic_sensor"
-    android:layout_marginBottom="30dp"
-    />
-
-
-<LinearLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_marginRight="10dp"
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/button_customized"
-        android:layout_weight="1"
-        android:text="@string/game"
-        android:drawableTop="@drawable/ic_game"/>
+        android:drawableTop="@drawable/ic_sensor"
+        android:text="@string/sensors" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_customized"
-        android:layout_weight="1"
-        android:text="@string/gps"
-        android:drawableTop="@drawable/ic_gps"/>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_customized"
+            android:drawableTop="@drawable/ic_game"
+            android:text="@string/game" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_customized"
+            android:drawableTop="@drawable/ic_gps"
+            android:text="@string/gps" />
+    </LinearLayout>
 </LinearLayout>
-</LinearLayout>
+
 

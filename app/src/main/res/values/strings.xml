@@ -3,4 +3,5 @@
     <string name="sensors">Sensors</string>
     <string name="game">Game</string>
     <string name="gps">GPS</string>
+    <string name="all_sensors_available">All sensors available</string>
 </resources>
