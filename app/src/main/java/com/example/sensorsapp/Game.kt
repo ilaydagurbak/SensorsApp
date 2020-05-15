@@ -2,6 +2,7 @@ package com.example.sensorsapp
 import android.app.Activity
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
 import android.hardware.Sensor
@@ -11,12 +12,16 @@ import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.Menu
 
+
 class Game : Activity(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
     private lateinit var accelerometer: Sensor
     private var lastUpdate: Long = 0
     private lateinit var animatedView: AnimatedView
-    var ballShape = ShapeDrawable()
+    var ballShape = ShapeDrawable(OvalShape())
+
+    private var touchScreen = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
@@ -46,11 +51,9 @@ class Game : Activity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(arg0: Sensor, arg1: Int) {
-        // TODO Auto-generated method stub
     }
 
     override fun onSensorChanged(event: SensorEvent) {
-        // TODO Auto-generated method stub
         if (event.sensor.type == Sensor.TYPE_ACCELEROMETER) {
             x -= event.values[0].toInt()
             y += event.values[1].toInt()
@@ -67,17 +70,8 @@ class Game : Activity(), SensorEventListener {
                 Game.y + Companion.height
             )
             ballShape.draw(canvas)
+            ballShape.paint.color = Color.parseColor("#D53B96")
             invalidate()
-        }
-        init {
-            ballShape = ShapeDrawable(OvalShape())
-            ballShape.paint.color = 0xffff6600.toInt()
-            ballShape.setBounds(
-                Game.x,
-                Game.y,
-                Game.x + Companion.width,
-                Game.y + Companion.height
-            )
         }
     }
 
@@ -87,5 +81,4 @@ class Game : Activity(), SensorEventListener {
         var x = 0
         var y = 0
     }
-
 }

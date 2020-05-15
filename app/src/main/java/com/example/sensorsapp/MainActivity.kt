@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
                 button1.setOnClickListener { this.startSensors() }
                 button2.setOnClickListener { this.startGame() }
+                button3.setOnClickListener { this.startGps() }
 
         }
 
@@ -25,5 +26,11 @@ class MainActivity : AppCompatActivity() {
         private fun startGame() {
                 val intent = Intent(this, Game::class.java)
                 startActivity(intent)
+
+        }  private fun startGps() {
+                val intent = Intent(this, Gps::class.java)
+                startActivity(intent)
         }
+
+
 }

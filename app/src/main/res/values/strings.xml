@@ -4,4 +4,18 @@
     <string name="game">Game</string>
     <string name="gps">GPS</string>
     <string name="all_sensors_available">All sensors available</string>
+    <string name="start_updates" />
+    <string name="get_last_location">last location</string>
+    <string name="stop_updates">stop updates</string>
+    <string name="fetch_Location">get location</string>
+    <string name="location">location</string>
+    <string name="permission_rationale">permission rational</string>
+    <string name="permission_denied_explanation">denied</string>
+    <string name="settings">settings</string>
+    <string name="no_location_detected">no location</string>
+    <string name="longitude_label">"longtitute "</string>
+    <string name="latitude_label">latitude</string>
+    <string name="latitude">Latitude: </string>
+    <string name="longitude">Longitude: </string>
+    <string name="Distance">Distance: </string>
 </resources>
